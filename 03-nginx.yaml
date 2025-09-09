@@ -1,13 +1,12 @@
-- name: install and run nginx 
+- name: start and run nginx
   hosts: web
-  become: yes # -b (It means sudo access)
+  become: yes # -b 
   tasks:
-  - name: install nginx 
+  - name: installing nginx 
     ansible.builtin.package:
-      name: nginx 
+      name: nginx
       state: present
-  - name: start the nginx 
+  - name: running nginx
     ansible.builtin.service:
       name: nginx
       state: started
-  
