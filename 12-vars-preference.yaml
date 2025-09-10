@@ -6,9 +6,9 @@
   # vars_files:
   # - course.yaml
   vars_prompt:
-  - name: GREET
-    prompt: Enter the value 
-    private: false
+  # - name: GREET
+  #   prompt: Enter the value 
+  #   private: false
   tasks:
   - name: print the variables
     # vars:
@@ -21,3 +21,5 @@
 #1 Commands line args 
 #2 Task Level
 #3 files
+#4 prompts
+#5 
