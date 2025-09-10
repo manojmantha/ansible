@@ -1,8 +1,8 @@
 - name: Varibles preference 
   hosts: local
   connection: local
-  vars:
-    GREET: "PLAY"
+  # vars:
+  #   GREET: "PLAY"
   # vars_files:
   # - course.yaml
   vars_prompt:
@@ -22,4 +22,5 @@
 #2 Task Level
 #3 files
 #4 prompts
-#5 
+#5 PLAY Level
+#6 
