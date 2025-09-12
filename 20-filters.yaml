@@ -2,7 +2,7 @@
   hosts: local
   connection: local
   tasks:
-  
+
   - name: Handle the undefined variable
     ansible.builtin.debug:
       msg : "Hello {{ person | default('Manoj')}}"
@@ -35,6 +35,6 @@
     vars:
       name: Manoj
     ansible.builtin.debug:
-      msg: "{{ name }}"
+      msg: "{{ name | upper }}"
 
     
