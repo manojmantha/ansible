@@ -11,6 +11,7 @@
     # ansible.builtin.command: ls 
     ansible.builtin.command: lseee -ltssd
     register: command_result 
+    ignores_error: true
   
   - name: print the command output
     ansible.builtin.debug:
