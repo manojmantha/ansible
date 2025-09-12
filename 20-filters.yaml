@@ -42,11 +42,17 @@
       name: Manoj
     ansible.builtin.debug:
       msg: "{{ name | lower }}"
-      
+
   - name: print min and max 
     vars:
       my_number: [12, 13, 23, 12, 01, 32,]
     ansible.builtin.debug:
       msg: " min | {{ my_number | min }} max {{ my_number | max}}"
+  
+  - name: Checking valid ip address or not 
+    vars:
+      ip :  "192.168.1.2444"
+    ansible.builtin.debug:
+      msg: "{{ ip }}"
 
     
