@@ -8,6 +8,8 @@
   
   - name: execute ls command in command module
     # ansible.builtin.command: ls -lt > /temp/output.txt
-    ansible.builtin.command: ls 
+    # ansible.builtin.command: ls 
+    ansible.builtin.command: lseee -ltssd
+    
 
     
