@@ -3,6 +3,10 @@
   connection: local
   tasks:
 
+  - name: Installing netaddr 
+    ansible.builtin.pip:
+    
+
   - name: Handle the undefined variable
     ansible.builtin.debug:
       msg : "Hello {{ person | default('Manoj')}}"
