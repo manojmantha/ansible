@@ -2,14 +2,17 @@
   hosts: local
   connection: local
   tasks:
+  
   - name: Handle the undefined variable
     ansible.builtin.debug:
       msg : "Hello {{ person | default('Manoj')}}"
+
   - name: Convert String to list 
     vars:
       fruits: "apple, banana, orange" # String
     ansible.builtin.debug:
       msg: "{{ fruits | split(',')}}"
+
   - name: convert map to list
     vars:
       course:
@@ -18,6 +21,7 @@
         trainer: sivakumar 
     ansible.builtin.debug:
       msg: "Course info: {{ course | dict2items }}"
+
   - name: convert list to map
     vars:
       course:
@@ -26,4 +30,11 @@
       - {'key': 'trainer', 'value': 'sivakumar'}
     ansible.builtin.debug:
       msg: "Course info: {{ course | items2dict }}"
+
+  - name: Convert into uppercase
+    vars:
+      name: Manoj
+    ansible.builtin.debug:
+      msg: "{{ name }}"
+
     
