@@ -4,4 +4,7 @@
   tasks:
   - name: execute ls Command
     ansible.builtin.command: ls 
-      
+    register: ans 
+  - name: print
+    ansible.builtin.debug:
+      msg: "{{ ans }}"
