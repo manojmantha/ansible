@@ -2,7 +2,7 @@
   hosts: web
   tasks:
   - name: Install Pacakages
-    ansible.builtin.packages:
+    ansible.builtin.package:
       name: "{{ item }}"
       state: installed
     loop:
@@ -10,4 +10,3 @@
     - mysql
     - zip 
     - git
-    
