@@ -12,8 +12,8 @@
     - backend
     - frontend
   tasks:
-  - name: creating ec2 instances 
-    amzon.aws.ec2_instance:
+  - name: create ec2 instances
+    amazon.aws.ec2_instance:
       name: "{{ item }}"
       subnet_id: "{{ subnet_id }}"
       security_group: "{{ sg_id }}"
